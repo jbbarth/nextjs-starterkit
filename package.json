@@ -6,8 +6,10 @@
   "scripts": {
     "lint": "eslint components lib pages server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node server.js",
-    "build": "next build",
+    "dev": "node server.js & yarn dev:css",
+    "dev:css": "postcss styles/index.css --watch --config styles/config/postcss.config.js -o static/css/bundle.css",
+    "build": "next build & yarn build:css",
+    "build:css": "postcss styles/index.css -c styles/config/postcss.config.js -o static/css/bundle.css",
     "start": "cross-env NODE_ENV=production node server.js",
     "analyze": "cross-env ANALYZE=1 next build"
   },
@@ -29,8 +31,13 @@
     "webpack-bundle-analyzer": "^2.8.3"
   },
   "devDependencies": {
+    "autoprefixer": "^9.1.0",
+    "cssnano": "^4.0.5",
     "husky": "^0.14.3",
+    "postcss-cli": "^6.0.0",
+    "postcss-easy-import": "^3.0.0",
     "prettier": "1.13.7",
-    "pretty-quick": "^1.6.0"
+    "pretty-quick": "^1.6.0",
+    "tailwindcss": "^0.6.4"
   }
 }

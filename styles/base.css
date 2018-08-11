@@ -1,0 +1,6 @@
+a, a:visited {
+  @apply .text-orange-darker;
+}
+a:hover {
+  text-decoration: underline;
+}
