@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import ActiveLink from "./ActiveLink"
 
 const Header = () => (
   <div>
@@ -8,14 +8,10 @@ const Header = () => (
     <nav className="border-b border-t border-grey-light p-3 mb-2">
       <ul className="list-reset flex font-bold">
         <li className="mr-6">
-          <Link prefetch href="/">
-            <a>Home</a>
-          </Link>
+          <ActiveLink prefetch href="/">Home</ActiveLink>
         </li>
         <li className="mr-6">
-          <Link href="/about">
-            <a>About</a>
-          </Link>
+          <ActiveLink href="/about">About</ActiveLink>
         </li>
       </ul>
     </nav>
