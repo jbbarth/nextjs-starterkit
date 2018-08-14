@@ -5,11 +5,33 @@ import _ from 'lodash'
 
 const Index = ({ kvs }) => (
   <Layout>
-    <ul>
-    {_.map(kvs, (kv, i) => (
-      <li key={i}>id={kv.id} key={kv.key} value=<code>{JSON.stringify(kv.value)}</code></li>
-    ))}
-    </ul>
+    <h2>KVs</h2>
+    <table className="text-left table-collapse">
+      <thead>
+        <tr>
+          {_.map(["id", "key", "value"], (title, i) => (
+            <th key={i} className="text-sm font-semibold text-grey-darker p-2 bg-grey-lightest">
+              {title}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody className="align-baseline">
+        {_.map(kvs, (kv, i) => (
+          <tr key={i}>
+            <td className="p-2 border-t border-grey-light font-mono text-xs text-purple-dark whitespace-no-wrap">
+              {kv.id}
+            </td>
+            <td className="p-2 border-t border-grey-light font-mono text-xs text-purple-dark whitespace-no-wrap">
+              {kv.key}
+            </td>
+            <td className="p-2 border-t border-grey-light font-mono text-xs text-purple-dark whitespace-no-wrap">
+              <code>{JSON.stringify(kv.value, null, 2)}</code>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   </Layout>
 )
 

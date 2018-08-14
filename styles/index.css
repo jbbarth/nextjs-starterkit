@@ -1,40 +1,26 @@
-@import "./reset.css";
-@import "./base.css";
 @import "./button.css";
 
 @tailwind preflight;
 @tailwind utilities;
 
-.row {
-  max-width: 880px;
-  margin: 80px auto 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.card {
-  padding: 18px 18px 24px;
-  width: 220px;
-  text-align: left;
+/* RESET */
+a, a:visited {
   text-decoration: none;
-  color: #434343;
-  border: 1px solid #9B9B9B;
 }
 
-.card:hover {
-  border-color: #067df7;
+/* BASE STYLES */
+body {
+  font-family: 'Source Sans Pro', sans-serif;
 }
-
-.card h3 {
-  margin: 0;
-  color: #067df7;
-  font-size: 18px;
+a, a:visited {
+  @apply .text-orange-darker;
 }
-
-.card p {
-  margin: 0;
-  padding: 12px 0 0;
-  font-size: 13px;
-  color: #333;
+a:hover {
+  text-decoration: underline;
+}
+h1 {
+  @apply .text-2xl .font-medium .mt-1 .mb-2;
+}
+h2 {
+  @apply .text-xl .font-medium .mt-1 .mb-2;
 }
