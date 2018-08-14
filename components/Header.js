@@ -1,12 +1,12 @@
 import ActiveLink from "./ActiveLink"
 
 const Header = () => (
-  <div>
-    <div className="mt-2 p-2 text-xl font-semibold">
+  <div className="pt-1 bg-grey-lightest border-b border-grey-light mb-1">
+    <div className="px-4 py-2 text-xl font-semibold">
       <span className="text-orange-darker">FOOBAR</span>.example.com
     </div>
-    <nav className="border-b border-t border-grey-light p-3 mb-2">
-      <ul className="list-reset flex font-bold">
+    <nav className="px-4 py-3 py-2">
+      <ul className="list-reset flex text-sm font-semibold">
         <li className="mr-6">
           <ActiveLink prefetch href="/">Home</ActiveLink>
         </li>

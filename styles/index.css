@@ -10,7 +10,8 @@ a, a:visited {
 
 /* BASE STYLES */
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-display: block;
 }
 a, a:visited {
   @apply .text-orange-darker;

@@ -15,7 +15,7 @@ export default class MyDocument extends Document {
           <link rel="stylesheet" href="/static/css/bundle.css" />
         </Head>
         <body>
-          <div className="container mx-auto px-2">
+          <div className="container mx-auto">
             <Main />
           </div>
           <NextScript />
