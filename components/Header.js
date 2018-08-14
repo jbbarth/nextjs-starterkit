@@ -1,3 +1,4 @@
+import React from 'react'
 import ActiveLink from "./ActiveLink"
 
 const Header = () => (

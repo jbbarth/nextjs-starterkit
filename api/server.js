@@ -1,5 +1,6 @@
 import kv from "./controllers/kvs";
 
+/* eslint import/default:0 */
 module.exports = app => {
   app.get("/api", (req, res) => {
     return res.status(200).send({

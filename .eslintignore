@@ -1,0 +1,10 @@
+build/
+dist/
+node_modules/
+vendor/
+coverage/
+apps/common-js/src/lib/sdk/base
+apps/common-js/src/lib/sdk/report-backend
+apps/website/public
+
+.DS_Store

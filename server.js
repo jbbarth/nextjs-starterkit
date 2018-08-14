@@ -27,10 +27,12 @@ app.prepare()
 
   server.listen(3000, (err) => {
     if (err) throw err
+    /* eslint no-console:0 */
     console.log('> Ready on http://localhost:3000')
   })
 })
 .catch((ex) => {
+  /* eslint no-console:0 */
   console.error(ex.stack)
   process.exit(1)
 })

@@ -1,3 +1,4 @@
+/* eslint import/named:0 */
 import { KV } from "../models"
 
 const getKVProps = kv => {
@@ -16,6 +17,7 @@ module.exports = {
       const kvs = await KV.findAll()
       return res.status(200).send(kvs.map(getKVProps))
     } catch (err) {
+      /* eslint no-console:0 */
       console.log(err)
       return res.status(500).send(err)
     }
@@ -32,6 +34,7 @@ module.exports = {
       }
       return res.status(200).send(getKVProps(kv))
     } catch (err) {
+      /* eslint no-console:0 */
       console.log(err)
       return res.status(500).send(err)
     }
