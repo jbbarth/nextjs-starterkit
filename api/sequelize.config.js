@@ -23,6 +23,7 @@ if (process.env.NODE_ENV === "production") {
     port: process.env.DB_PORT,
     dialect: "postgres",
     operatorsAliases: Sequelize.Op,
+    migrationStorageTableName: "sequelize_meta",
   }
 } else {
   module.exports.development = {
@@ -33,5 +34,6 @@ if (process.env.NODE_ENV === "production") {
     port: process.env.DB_PORT || 5432,
     dialect: "postgres",
     operatorsAliases: Sequelize.Op,
+    migrationStorageTableName: "sequelize_meta",
   }
 }

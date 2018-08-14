@@ -1,21 +1,20 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Sessions', {
+    return queryInterface.createTable('kvs', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      session_id: {
-        type: Sequelize.STRING
+      key: {
+        type: Sequelize.STRING,
+        unique: 'kv_key_index',
+        allowNull: false,
       },
-      session: {
+      value: {
         type: Sequelize.JSON
-      },
-      expire: {
-        type: Sequelize.DATE(6)
       },
       createdAt: {
         allowNull: false,
@@ -28,6 +27,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Sessions');
+    return queryInterface.dropTable('kvs');
   }
 };
