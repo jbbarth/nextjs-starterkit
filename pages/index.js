@@ -15,24 +15,24 @@ const Index = ({ kvs }) => (
               {_.map(["id", "key", "value"], (title, i) => (
                 <th
                   key={i}
-                  className="text-sm font-semibold text-grey-darker py-2 px-3 bg-grey-lightest"
+                  className="text-sm font-semibold text-orange-darker py-2 px-3 bg-grey-lightest"
                 >
                   {title}
                 </th>
               ))}
             </tr>
           </thead>
-          <tbody className="align-baseline">
+          <tbody className="align-baseline text-grey-darker">
             {_.map(kvs, (kv, i) => (
               <tr key={i}>
-                <td className="py-2 px-3 border-t border-grey-light font-mono text-xs text-purple-dark whitespace-no-wrap">
+                <td className="py-2 px-3 border-t border-grey-light font-mono text-xs whitespace-no-wrap">
                   {kv.id}
                 </td>
-                <td className="py-2 px-3 border-t border-grey-light font-mono text-xs text-purple-dark whitespace-no-wrap">
+                <td className="py-2 px-3 border-t border-grey-light font-mono text-xs whitespace-no-wrap">
                   {kv.key}
                 </td>
-                <td className="py-2 px-3 border-t border-grey-light font-mono text-xs text-purple-dark whitespace-no-wrap">
-                  <code>{JSON.stringify(kv.value, null, 2)}</code>
+                <td className="py-2 px-3 border-t border-grey-light font-mono text-xs whitespace-no-wrap">
+                  <pre>{JSON.stringify(kv.value, null, 2)}</pre>
                 </td>
               </tr>
             ))}
