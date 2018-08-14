@@ -4,7 +4,7 @@ if (process.env.NODE_ENV !== "production") {
 
 const Sequelize = require("sequelize")
 
-const die = (msg) => {
+const die = msg => {
   throw new Error(msg)
 }
 

@@ -3,9 +3,10 @@ require("@babel/register")({
   babelrc: false,
   presets: [
     [
-      "@babel/env", {
-        "targets": {
-          "node": "current"
+      "@babel/env",
+      {
+        targets: {
+          node: "current",
         },
       },
     ],

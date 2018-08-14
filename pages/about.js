@@ -1,8 +1,8 @@
-import React from 'react'
-import Layout from '../components/Layout.js'
+import React from "react"
+import Layout from "../components/Layout.js"
 
 export default () => (
-    <Layout>
-       <p>This is the about page</p>
-    </Layout>
+  <Layout>
+    <p>This is the about page</p>
+  </Layout>
 )

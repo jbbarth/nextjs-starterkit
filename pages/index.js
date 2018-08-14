@@ -1,8 +1,8 @@
-import React from 'react'
-import Layout from '../components/Layout.js'
-import Link from 'next/link'
-import fetch from 'isomorphic-unfetch'
-import _ from 'lodash'
+import React from "react"
+import Layout from "../components/Layout.js"
+import Link from "next/link"
+import fetch from "isomorphic-unfetch"
+import _ from "lodash"
 
 const Index = ({ kvs }) => (
   <Layout>
@@ -13,7 +13,10 @@ const Index = ({ kvs }) => (
           <thead>
             <tr>
               {_.map(["id", "key", "value"], (title, i) => (
-                <th key={i} className="text-sm font-semibold text-grey-darker py-2 px-3 bg-grey-lightest">
+                <th
+                  key={i}
+                  className="text-sm font-semibold text-grey-darker py-2 px-3 bg-grey-lightest"
+                >
                   {title}
                 </th>
               ))}

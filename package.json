@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "lint": "eslint api components pages server.js",
+    "lint:fix": "prettier --write api/**js components/**js pages/**js server.js && eslint --fix api components pages server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "db:migrate": "sequelize db:migrate",
     "babel-node": "babel-node",

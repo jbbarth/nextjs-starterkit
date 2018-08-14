@@ -10,25 +10,27 @@ import { Model, DataTypes } from "sequelize"
 ///
 class KV extends Model {
   static init(sequelize) {
-    return super.init({
-      key: {
-        type: DataTypes.STRING,
-        // field: 'key',
-        unique: 'kv_key_index',
-        allowNull: false,
-        validate: {
-          notEmpty: true,
+    return super.init(
+      {
+        key: {
+          type: DataTypes.STRING,
+          // field: 'key',
+          unique: "kv_key_index",
+          allowNull: false,
+          validate: {
+            notEmpty: true,
+          },
         },
+        value: DataTypes.JSON,
       },
-      value: DataTypes.JSON,
-    }, {
-      tableName: "kvs",
-      sequelize,
-    })
+      {
+        tableName: "kvs",
+        sequelize,
+      },
+    )
   }
 
-  static associate(sequelize) {
-  }
+  static associate(sequelize) {}
 }
 
 export default KV
