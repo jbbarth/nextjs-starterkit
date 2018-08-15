@@ -51,3 +51,19 @@ Build / run in production
     sequelize db:migrate
     npm start
 
+
+Build / run a docker image
+-----------------------
+
+Build:
+
+    docker build -t a_tag -f misc/Dockerfile .
+
+Run:
+
+    docker run --rm \
+      -p 3000:3000 \
+      -e DB_HOST=db.example.com \
+      -e DB_USERNAME=a_username \
+      -e DB_DATABASE=a_database \
+       a_tag

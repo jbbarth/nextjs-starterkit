@@ -9,6 +9,8 @@ RUN apk add --update --no-cache build-base python
 COPY package.json yarn.lock /app/
 RUN npm install -g yarn && yarn install
 
+ENV NODE_ENV=production
+
 COPY . /app
 RUN npm run build
 
