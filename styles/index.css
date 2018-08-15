@@ -9,6 +9,9 @@ a, a:visited {
 }
 
 /* BASE STYLES */
+html {
+  font-size: 14px;
+}
 body {
   font-family: 'Open Sans', sans-serif;
   font-display: block;

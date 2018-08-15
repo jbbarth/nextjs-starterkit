@@ -7,7 +7,7 @@ const Header = () => (
       <span className="text-orange-darker">FOOBAR</span>.example.com
     </div>
     <nav className="px-4 py-3 py-2">
-      <ul className="list-reset flex text-sm font-semibold">
+      <ul className="list-reset flex font-semibold">
         <li className="mr-6">
           <ActiveLink prefetch href="/">Home</ActiveLink>
         </li>

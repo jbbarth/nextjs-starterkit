@@ -18,7 +18,7 @@ const Settings = ({ kvs }) => (
               {_.map(["id", "key", "value"], (title, i) => (
                 <th
                   key={i}
-                  className="text-sm font-semibold text-orange-darker py-2 px-3 bg-grey-lightest"
+                  className="font-semibold text-orange-darker py-2 px-3 bg-grey-lightest"
                 >
                   {title}
                 </th>
@@ -28,13 +28,13 @@ const Settings = ({ kvs }) => (
           <tbody className="align-baseline text-grey-darker">
             {_.map(kvs, (kv, i) => (
               <tr key={i}>
-                <td className="py-2 px-3 border-t border-grey-light font-mono text-xs whitespace-no-wrap">
+                <td className="py-2 px-3 border-t border-grey-light font-mono whitespace-no-wrap">
                   {kv.id}
                 </td>
-                <td className="py-2 px-3 border-t border-grey-light font-mono text-xs whitespace-no-wrap">
+                <td className="py-2 px-3 border-t border-grey-light font-mono whitespace-no-wrap">
                   {kv.key}
                 </td>
-                <td className="py-2 px-3 border-t border-grey-light font-mono text-xs whitespace-no-wrap">
+                <td className="py-2 px-3 border-t border-grey-light font-mono whitespace-no-wrap">
                   <pre>{JSON.stringify(kv.value, null, 2)}</pre>
                 </td>
               </tr>
