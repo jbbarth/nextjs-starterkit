@@ -1,4 +1,4 @@
-FOOBAR.example.com
+NextJS starter kit
 ==================
 
 This repository is a basic starter kit for bootstrapping an internal tool
