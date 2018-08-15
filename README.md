@@ -67,3 +67,31 @@ Run:
       -e DB_USERNAME=a_username \
       -e DB_DATABASE=a_database \
        a_tag
+
+
+FAQ
+---
+
+*Do you really need a FAQ?*
+
+Of course, people want to know!
+
+*Why not node 9.x or 10.x?*
+
+As of August 2018 official node images come only for stable versions (even numbers)
+and node 10.x breaks with our current dependencies on MacOS with some compilation
+errors on fsevents package. Note that it used to break on firebase/grpc too, even
+on Linux, so let's wait for a bit before packages are compatible.
+
+*Why not component X, framework Y, deploy method Z?*
+
+This starter kit is opinionated and brings to the table, well my table, what's
+critically missing in the JS ecosystem as I practice it for a few years: cohesion.
+Also most choices are inspired by mainstream components I already use at work
+in one form or another.
+
+If you want to propose something, feel free to do it with an issue with a tiny
+rationale. Note that I have 0 interest in the latest hype from last week: while I
+put a bit of love in this repository, the end goal is to _escape_ the madness of
+gluing technologies together every 3 commits and actually spend more time on
+building nice web applications.
