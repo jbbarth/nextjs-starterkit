@@ -1,7 +1,7 @@
 {
-  "name": "hello-next",
-  "version": "1.0.0",
-  "description": "",
+  "name": "nextjs-starterkit",
+  "version": "0.0.1",
+  "description": "A starter kit with NextJS, Express, Sequelize",
   "main": "server.js",
   "scripts": {
     "lint": "eslint api components pages server.js",
@@ -24,7 +24,7 @@
     ]
   },
   "keywords": [],
-  "author": "",
+  "author": "Jean-Baptiste Barth",
   "license": "MIT",
   "husky": {
     "hooks": {
