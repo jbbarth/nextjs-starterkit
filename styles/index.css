@@ -20,8 +20,11 @@ a:hover {
   text-decoration: underline;
 }
 h1 {
-  @apply .text-2xl .font-medium .mt-1 .mb-2;
+  @apply .text-2xl .font-medium .mt-1 .mb-3;
 }
 h2 {
   @apply .text-xl .font-medium .mt-1 .mb-2;
+}
+p {
+  @apply .mt-1 .mb-2;
 }

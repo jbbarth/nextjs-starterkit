@@ -9,9 +9,10 @@ const Header = () => (
     <nav className="px-4 py-3 py-2">
       <ul className="list-reset flex text-sm font-semibold">
         <li className="mr-6">
-          <ActiveLink prefetch href="/">
-            Home
-          </ActiveLink>
+          <ActiveLink prefetch href="/">Home</ActiveLink>
+        </li>
+        <li className="mr-6">
+          <ActiveLink href="/settings">Settings</ActiveLink>
         </li>
         <li className="mr-6">
           <ActiveLink href="/about">About</ActiveLink>
