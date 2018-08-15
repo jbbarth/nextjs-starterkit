@@ -1,9 +1,9 @@
 const express = require("express")
 const next = require("next")
-const setupApi = require("./api").default
+const setupApi = require("./transpiler").default
 
 const dev = process.env.NODE_ENV !== "production"
-const app = next({ dev })
+const app = next({ dev, dir: "./client" })
 const handle = app.getRequestHandler()
 
 app

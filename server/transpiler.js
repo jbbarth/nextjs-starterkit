@@ -13,4 +13,4 @@ require("@babel/register")({
   ],
 })
 
-module.exports = { default: require("./server") }
+module.exports = { default: require("./api") }
