@@ -44,5 +44,10 @@ Build / run in production
 -------------------------
 
     npm run build
+
+    export DB_HOST=db.example.com
+    export DB_USERNAME=a_username
+    export DB_DATABASE=a_database
+    sequelize db:migrate
     npm start
 
