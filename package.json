@@ -6,7 +6,7 @@
   "scripts": {
     "analyze": "cross-env ANALYZE=1 next build client",
     "lint": "eslint client server",
-    "lint:fix": "prettier --write client/**js server/**js && yarn lint --fix",
+    "lint:fix": "prettier --write client/**/*js server/**/*js && yarn lint --fix",
     "dev": "concurrently --kill-others --raw 'yarn dev:server' 'yarn dev:css'",
     "dev:css": "postcss client/styles/index.css --watch --config client/styles/config/postcss.config.js -o client/static/css/bundle.css",
     "dev:server": "NODE_ENV=development nodemon --watch server -- ./server/index.js",
