@@ -17,8 +17,6 @@ It features:
 - [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) for code linting
 - [nodemon](http://nodemon.io/) and watch modes for code reloading during development
 - recipes for building a Docker image and ultimately deploy the app
-- some bits of babel/webpack/whatever to wire everything and add ES6+import syntax
-  on the server part
 
 TODO:
 - add something for nice / easy testing
@@ -85,13 +83,13 @@ Of course, people want to know!
 
 **Why not component X, framework Y, deploy method Z?**
 
-This starter kit is opinionated and brings to the table, well my table, what's
+This starter kit is opinionated and brings to the table (well _my_ table), what's
 critically missing in the JS ecosystem as I practice it for a few years: cohesion.
-Also most choices are inspired by mainstream components I already use at work
-in one form or another.
+Most choices are inspired by mainstream components we already use at work in one
+form or another.
 
-If you want to propose something, feel free to do it with an issue with a tiny
+If you want to propose something, feel free to do it via an issue with a tiny
 rationale. Note that I have 0 interest in the latest hype from last week: while I
 put a bit of love in this repository, the end goal is to _escape_ the madness of
-gluing technologies together every 3 commits and actually spend more time on
+gluing technologies together every 3 commits, and actually spend more time on
 building nice web applications.
