@@ -1,4 +1,4 @@
-import kv from "./controllers/kvs"
+const kv = require("./controllers/kvs")
 
 /* eslint import/default:0 */
 module.exports = app => {

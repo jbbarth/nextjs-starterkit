@@ -1,4 +1,4 @@
-import { Model, DataTypes } from "sequelize"
+const { Model, DataTypes } = require("sequelize")
 
 class Session extends Model {
   static init(sequelize) {
@@ -18,4 +18,6 @@ class Session extends Model {
   static associate(sequelize) {}
 }
 
-export default Session
+module.exports = {
+  default: Session,
+}

@@ -1,13 +1,5 @@
-import { Model, DataTypes } from "sequelize"
-///module.exports = (sequelize, DataTypes) => {
-///  var KV = sequelize.define('KV', {
-///  }, {});
-///  KV.associate = function(models) {
-///    // associations can be defined here
-///  };
-///  return KV;
-///};
-///
+const { Model, DataTypes } = require("sequelize")
+
 class KV extends Model {
   static init(sequelize) {
     return super.init(
@@ -33,4 +25,6 @@ class KV extends Model {
   static associate(sequelize) {}
 }
 
-export default KV
+module.exports = {
+  default: KV,
+}

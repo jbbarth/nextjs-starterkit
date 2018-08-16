@@ -1,5 +1,5 @@
 /* eslint import/named:0 */
-import { KV } from "../models"
+const { KV } = require("../models")
 
 const getKVProps = kv => {
   return {
