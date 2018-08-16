@@ -12,7 +12,7 @@ RUN npm install -g yarn && yarn install
 ENV NODE_ENV=production
 
 COPY . /app
-RUN npm run build
+RUN yarn build
 
 EXPOSE 3000
 CMD [ "npm", "start" ]

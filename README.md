@@ -37,13 +37,13 @@ First use the correct version of NPM via NVM:
 
 Run the server locally:
 
-    npm run dev
+    yarn dev
 
 
 Build / run in production
 -------------------------
 
-    npm run build
+    yarn build
 
     export DB_HOST=db.example.com
     export DB_USERNAME=a_username
