@@ -13,12 +13,12 @@ everything up can take an infinite amount of time.
 It features:
 - [NextJS](https://nextjs.org/) and [ExpressJS](http://expressjs.com/) for application development
 - [Sequelize](http://docs.sequelizejs.com/) for Postgres communication
-- [Tailwind CSS](https://tailwindcss.com/) for styles + a few goodies
+- [Tailwind CSS](https://tailwindcss.com/) for styles along with [PostCSS](https://postcss.org/), [autoprefixer](https://github.com/postcss/autoprefixer) and [cssnano](https://cssnano.co/)
 - [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/) for code linting
-- code reloading in development via [nodemon](http://nodemon.io/)
-- everything needed to build as a Docker container and ultimately deploy the app
+- [nodemon](http://nodemon.io/) and watch modes for code reloading during development
+- recipes for building a Docker image and ultimately deploy the app
 - some bits of babel/webpack/whatever to wire everything and add ES6+import syntax
-  on the server part.
+  on the server part
 
 
 Install
@@ -31,7 +31,7 @@ Install
 Develop
 -------
 
-First use the correct version of NPM via NVM:
+First use the correct version of NPM via [NVM](https://github.com/creationix/nvm) (optional but recommended):
 
     nvm use
 
@@ -49,7 +49,7 @@ Build / run in production
     export DB_USERNAME=a_username
     export DB_DATABASE=a_database
     sequelize db:migrate
-    npm start
+    yarn start
 
 
 Build / run a docker image
@@ -72,18 +72,18 @@ Run:
 FAQ
 ---
 
-*Do you really need a FAQ?*
+**Do you really need a FAQ?**
 
 Of course, people want to know!
 
-*Why not node 9.x or 10.x?*
+**Why not node 9.x or 10.x?**
 
 As of August 2018 official node images come only for stable versions (even numbers)
 and node 10.x breaks with our current dependencies on MacOS with some compilation
 errors on fsevents package. Note that it used to break on firebase/grpc too, even
 on Linux, so let's wait for a bit before packages are compatible.
 
-*Why not component X, framework Y, deploy method Z?*
+**Why not component X, framework Y, deploy method Z?**
 
 This starter kit is opinionated and brings to the table, well my table, what's
 critically missing in the JS ecosystem as I practice it for a few years: cohesion.
