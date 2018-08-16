@@ -20,6 +20,13 @@ It features:
 - some bits of babel/webpack/whatever to wire everything and add ES6+import syntax
   on the server part
 
+TODO:
+- add something for nice / easy testing
+- add scaffolding capabilities _à-la-Rails_
+- add Kubernetes deployment option
+- build or integrate basic components for tables, list filtering, forms
+- evaluate how apps starting with it could upgrade later
+
 
 Install
 -------
