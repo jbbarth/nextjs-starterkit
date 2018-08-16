@@ -83,13 +83,6 @@ FAQ
 
 Of course, people want to know!
 
-**Why not node 9.x or 10.x?**
-
-As of August 2018 official node images come only for stable versions (even numbers)
-and node 10.x breaks with our current dependencies on MacOS with some compilation
-errors on fsevents package. Note that it used to break on firebase/grpc too, even
-on Linux, so let's wait for a bit before packages are compatible.
-
 **Why not component X, framework Y, deploy method Z?**
 
 This starter kit is opinionated and brings to the table, well my table, what's
