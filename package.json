@@ -4,18 +4,19 @@
   "description": "A starter kit with NextJS, Express, Sequelize",
   "main": "server/index.js",
   "scripts": {
+    "analyze": "cross-env ANALYZE=1 next build client",
     "lint": "eslint client server",
-    "lint:fix": "prettier --write client/**js server/**js && eslint --fix client server",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "babel-node": "babel-node",
-    "dev": "NODE_ENV=development nodemon --exec babel-node --presets @babel/preset-env --watch server -- ./server/index.js & yarn dev:css",
+    "lint:fix": "prettier --write client/**js server/**js && yarn lint --fix",
+    "console": "babel-node",
+    "dev": "concurrently --kill-others --raw 'yarn dev:server' 'yarn dev:css'",
     "dev:css": "postcss client/styles/index.css --watch --config client/styles/config/postcss.config.js -o client/static/css/bundle.css",
+    "dev:server": "NODE_ENV=development nodemon --exec babel-node --presets @babel/preset-env --watch server -- ./server/index.js",
     "build": "yarn build:next && yarn build:server && yarn build:css",
     "build:css": "postcss client/styles/index.css --config client/styles/config/postcss.config.js -o client/static/css/bundle.css",
     "build:next": "next build client",
     "build:server": "NODE_ENV=production babel server --out-dir .next/dist",
     "start": "NODE_ENV=production node .next/dist/index.js",
-    "analyze": "cross-env ANALYZE=1 next build client"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "nodemonConfig": {
     "verbose": false,
@@ -53,6 +54,7 @@
     "@babel/register": "^7.0.0-rc.1",
     "autoprefixer": "^9.1.0",
     "babel-eslint": "^8.2.6",
+    "concurrently": "^3.6.1",
     "cssnano": "^4.0.5",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.1.0",
